@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="uvc_camera" name="uvc_camera_node" type="uvc_camera_node">
+		<remap from="image_raw/" to="new_image_raw" />
+	</node>
+	<node pkg="traffic_sign_recognition" name="vision" type="vision" cwd="node" output="screen">
+	</node>
+
+</launch>
